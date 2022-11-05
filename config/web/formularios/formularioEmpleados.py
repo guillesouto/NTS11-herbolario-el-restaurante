@@ -17,8 +17,8 @@ class FormularioEmpleados(forms.Form):
 
     nombre=forms.CharField(
         required=True,
-        max_length=10,
-        label= 'Nombre del Platillo: ',
+        max_length=50,
+        label= 'Nombre del Empleado ',
         widget=forms.TextInput(attrs={'class':'form-control mb-3'})
     )
     apellidos=forms.CharField(

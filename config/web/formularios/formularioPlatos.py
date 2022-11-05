@@ -10,13 +10,13 @@ class FormularioPlatos(forms.Form):
 
     nombre=forms.CharField(
         required=True,
-        max_length=10,
-        label= 'Nombre del Empleado: ',
+        max_length=50,
+        label= 'Nombre del Plato ',
         widget=forms.TextInput(attrs={'class':'form-control mb-3'})
     )
     descripcion=forms.CharField(
         required=False,
-        max_length=20,
+        max_length=200,
         widget=forms.Textarea(attrs={'class':'form-control mb-3'})
     )
     fotografia=forms.CharField(        
