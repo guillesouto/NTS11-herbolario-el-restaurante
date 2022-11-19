@@ -47,9 +47,10 @@
         </div>
 
     </main>
+    <br>
     <section>
-        <div class="banner">
-            <img src="../static/img/elherbario_logo.svg">
+        <div class="banner2">
+            <h2 class="title text-center fw-bold">Nuestro Menu</h2>
         </div>
     </section>
 
@@ -57,8 +58,13 @@
         <div class="container">
             <div class="row row-1 row-cols-md-4">
                 {% for plato in platos%}
-                <h1>{{plato.nombre}}</h1>
-                <img src={{plato.fotografia}} alt="">
+                <div class="col">
+                    <div class="card h-100 shadow">
+                        <img src="{{plato.fotografia}}" alt="" class="img-fluid w-100 h-100">
+                        <h1 class="text-center text-muted">{{plato.nombre}}</h1>
+                        <h4 class="text-center fw-bold">precio: {{plato.precio}} $COP</h4>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>

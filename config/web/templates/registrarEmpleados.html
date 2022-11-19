@@ -37,6 +37,30 @@
 
     </main>
 
+    <br>
+    <section>
+        <div class="banner3">
+            <h2 class="title text-center fw-bold">Nuestra Plantilla</h2>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row row-1 row-cols-md-4">
+                {% for empleado in empleados%}
+                <div class="col">
+                    <div class="card h-100 shadow">
+                        <img src="{{empleado.fotografia}}" alt="" class="img-fluid w-100 h-100">
+                        <h1 class="text-center text-muted">{{empleado.nombre}} {{empleado.apellidos}}</h1>
+                        <h5 class="text-center fw-bold">Cargo: {{empleado.tipo}} </h5>
+                        <h5 class="text-center fw-bold">Contacto: {{empleado.contacto}} </h5>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
 
 
     <!--JAVASCRIPT BOOSTRAP-->

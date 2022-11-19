@@ -59,6 +59,12 @@ def PlatosVista(request):
     return render(request, 'menuplatos.html', data)
 
 def EmpleadosVista(request):
+
+    #rutina para consulta de Empleados
+    empleadosConsultados=Empleados.objects.all()
+    print(empleadosConsultados)
+
+
     #Esta vista va a utilizar un formulario de django
     # debo crear entonces un objeto de la clase FormularioEmpleados
     formulario=FormularioEmpleados()
@@ -66,7 +72,8 @@ def EmpleadosVista(request):
     #Creamos un Diccionario Para enviar el formulario al HTML(template)
     data={
         'formulario':formulario, 
-        'bandera': False
+        'bandera': False,
+        'empleados':empleadosConsultados
     }
 
     #Recibimos los datos del formulario
